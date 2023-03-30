@@ -56,7 +56,7 @@ Halie Woods
 - [Github - publishing images to DockerHub](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub)
 
 ## Part 3 - Diagramming
-![Continuous Integration Diagram](./)
+![Continuous Integration Diagram](./CIdiagram.jpg)
 
 ### Resource
 - [Setup Docker Hub + Github Workflow CI / CD Pipeline](https://itzone.com.vn/en/article/github-actions-tutorials-setup-docker-hub-github-workflow-ci-cd-pipeline-step-by-step-guide/)
