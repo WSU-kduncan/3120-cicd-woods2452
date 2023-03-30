@@ -48,8 +48,7 @@ Halie Woods
     - what does it do and when
         - Github worflows allow you to automate common development tasks and enforce specific development practices within your team. They can be triggered by a variety of events such as a push to a specific branch, the creation of a pull request, or the creation of a new tag. You can also manually trigger a workflow using the Github web interface or the Github CLI.
     - what variables in workflow are custom to your project
-        - think may need to be changed if someone else is going to use it or you reuse it
-
+        - Docker Hub username, password, and repository.
 
 ### Resources
 - [Docker Docs - CICD with Github Actions](https://docs.docker.com/build/ci/github-actions/)
