@@ -19,7 +19,7 @@ Halie Woods
 - How do you view the project running in the container?
     - Open a web browser and enter localhost:80
 
-### Resources
+### Resource
 - [Containers Class Notes](https://github.com/pattonsgirl/CEG3120/blob/main/CourseNotes/containers.md#container-managers)
 
 ## Part 2 - GitHub Actions and DockerHub
@@ -56,5 +56,8 @@ Halie Woods
 - [Github - publishing images to DockerHub](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images#publishing-images-to-docker-hub)
 
 ## Part 3 - Diagramming
+![Continuous Integration Diagram](./)
 
+### Resource
+- [Setup Docker Hub + Github Workflow CI / CD Pipeline](https://itzone.com.vn/en/article/github-actions-tutorials-setup-docker-hub-github-workflow-ci-cd-pipeline-step-by-step-guide/)
 
