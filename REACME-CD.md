@@ -13,10 +13,18 @@ Halie Woods
     3. Push the new tag to the remote repository on Github by running the following command: `git push origin tag-name`
 - Behavior of GitHub workflow
     - what does it do and when
-    
-- Link to Docker Hub repository (as additional proof)
+- [Link to Docker Hub repository](https://hub.docker.com/repository/docker/woods245/ceg3120proj4/general)
 
 ### Resources
 - [Semantic Versioning](https://semver.org/)
 - [GitHub - docker/metadata-action](https://github.com/docker/metadata-action)
 - [Docker - Manage Tag Labels](https://docs.docker.com/build/ci/github-actions/manage-tags-labels/)
+
+## Part 2 - Deployment
+### Documentation
+
+## Part 3 - Diagramming
+![Continuous Deployment Diagram](./CDdiagram.jpg)
+
+### Resource
+- [Dev Genious](https://blog.devgenius.io/build-your-first-ci-cd-pipeline-using-docker-github-actions-and-webhooks-while-creating-your-own-da783110e151)
