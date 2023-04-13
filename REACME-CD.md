@@ -13,6 +13,8 @@ Halie Woods
     3. Push the new tag to the remote repository on Github by running the following command: `git push origin tag-name`
 - Behavior of GitHub workflow
     - what does it do and when
+
+    
 - [Link to Docker Hub repository](https://hub.docker.com/repository/docker/woods245/ceg3120proj4/general)
 
 ### Resources
@@ -22,6 +24,7 @@ Halie Woods
 
 ## Part 2 - Deployment
 ### Documentation
+
 
 ## Part 3 - Diagramming
 ![Continuous Deployment Diagram](./CDdiagram.jpg)
