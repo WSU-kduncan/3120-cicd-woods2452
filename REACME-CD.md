@@ -36,7 +36,7 @@ Halie Woods
     - How to install adnanh's webhook to the instance
         - `sudo apt-get install webhook`
     - How to start the webhook
-        - since our instance's reboot, we need to handle this
+        - 
 - webhook task definition file
     - Description of what it does
     - Where it should be on the instance (if someone were to use your setup)
