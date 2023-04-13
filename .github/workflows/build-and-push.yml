@@ -5,7 +5,7 @@ on:
       tags:
         - "v..*"
 env:
-  DOCKERHUB_REPO: ceg3120proj4
+  DOCKERHUB_REPO: woods245/ceg3120proj4
 
 jobs:
 
