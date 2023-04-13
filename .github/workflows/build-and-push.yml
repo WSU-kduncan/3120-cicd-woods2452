@@ -1,32 +1,51 @@
-name: Docker Build and Publish
+name: Build and push Docker image
+
 on:
   push:
     tags:
       - '*'
+
 jobs:
-  build-and-publish:
+  build-and-push:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout Repository
+    - name: Checkout code
       uses: actions/checkout@v2
-    - name: Build Docker image
-      run: docker build -t woods245/ceg3120proj4:$GITHUB_REF .
-    - name: Generate Metadata
-      id: metadata
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build and push Docker image
+      id: docker_build
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: |
+          docker.io/woods245/ceg3120proj4:${{ github.ref }}
+          docker.io/woods245/ceg3120proj4:latest
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Generate Docker image metadata
       uses: docker/metadata-action@v3
       with:
-        images: woods245/ceg3120proj4:$GITHUB_REF
-        tags: |
-          latest
-          ${{ github.ref }}
-          ${{ github.ref }}-{{ github.sha }}
-    - name: Login to DockerHub
-      uses: docker/login-action@v1
+        images: docker.io/woods245/ceg3120proj4
+      id: metadata
+
+    - name: Publish Docker image metadata
+      uses: docker/metadata-action@v3
       with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Push Docker image
-      run: |
-        docker push woods245/ceg3120proj4:${{ github.ref }}
-        docker push woods245/ceg3120proj4:latest
+        images: docker.io/woods245/ceg3120proj4
+        metadata: |
+          {
+            "name": "ceg3120proj4",
+            "tags": ${{ steps.metadata.outputs.tags }}
+          }
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
 
