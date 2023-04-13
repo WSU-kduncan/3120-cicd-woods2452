@@ -1,7 +1,8 @@
-FROM ubuntu
-RUN apt-get update && \
-    apt-get intall -y apache2 && \
-    rm -rf /var/lib/apt/lists/*
-COPY index.html /var/www/html/
-EXPOSE 80
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+FROM httpd:2.4
+
+RUN apt update
+RUN apt install -y python3 python3-pip
+
+COPY html/index.html /usr/local/apache2/htdocs/
+
+EXPOSE 8080
