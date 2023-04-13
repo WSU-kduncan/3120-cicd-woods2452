@@ -19,7 +19,7 @@ jobs:
       id: docker/metadata
       uses: docker/metadata-action@v3
       with:
-        images: docker.io/woods245/ceg3120proj4:
+        images: docker.io/woods245/ceg3120proj4
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
