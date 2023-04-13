@@ -27,9 +27,14 @@ Halie Woods
     - I followed the directions from [docker.com](https://docs.docker.com/engine/install/ubuntu/).
 - Container restart script
     - Justification & description of what it does
+        1. Stops and removes the running container
+        2. Pulls the latest image from DockerHub
+        3. Starts a new container with the latest image
     - Where it should be on the instance (if someone were to use your setup)
+        - `/home/ubuntu`
 - Setting up a webhook on the instance
     - How to install adnanh's webhook to the instance
+        - `sudo apt-get install webhook`
     - How to start the webhook
         - since our instance's reboot, we need to handle this
 - webhook task definition file
