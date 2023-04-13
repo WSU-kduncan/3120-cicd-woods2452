@@ -8,13 +8,12 @@ Halie Woods
 ## Part 1 - Semantic Versioning
 ### Documentation
 - How to generate a `tag` in `git` / GitHub
-    1. Identify the commit hash that you want to tag using the `git log` command.
-    2. Run the following command to create a new tag for the identified commit: `git tag -a tag-name commit-hash -m "tag message"`
-    3. Push the new tag to the remote repository on Github by running the following command: `git push origin tag-name`
+    1. Use `git commit` to commit an update to GitHub.
+    2. Run the following command to create a new tag for the identified commit: `git tag -a v*.*.*`
+    3. Push the new tag to Github by running the following command: `git push origin v*.*.*`
 - Behavior of GitHub workflow
     - what does it do and when
-
-    
+        - When pushing a tag (`git push --tags`), three new images are pushed to Dockerhub. These three images include a MAJOR version, MAJOR.MINOR version, and a LATEST version.
 - [Link to Docker Hub repository](https://hub.docker.com/repository/docker/woods245/ceg3120proj4/general)
 
 ### Resources
@@ -24,7 +23,24 @@ Halie Woods
 
 ## Part 2 - Deployment
 ### Documentation
+- How to install Docker to your instance
+    - I followed the directions from [docker.com](https://docs.docker.com/engine/install/ubuntu/).
+- Container restart script
+    - Justification & description of what it does
+    - Where it should be on the instance (if someone were to use your setup)
+- Setting up a webhook on the instance
+    - How to install adnanh's webhook to the instance
+    - How to start the webhook
+        - since our instance's reboot, we need to handle this
+- webhook task definition file
+    - Description of what it does
+    - Where it should be on the instance (if someone were to use your setup)
+- How to configure GitHub OR DockerHub to message the listener
+- RECORD your whole workflow process - from commit and push to your instance getting a fresh image
 
+### Resources 
+- [Using GitHub actions and webhooks](https://levelup.gitconnected.com/automated-deployment-using-docker-github-actions-and-webhooks-54018fc12e32)
+- [Using DockerHub and webhooks](https://blog.devgenius.io/build-your-first-ci-cd-pipeline-using-docker-github-actions-and-webhooks-while-creating-your-own-da783110e151)
 
 ## Part 3 - Diagramming
 ![Continuous Deployment Diagram](./CDdiagram.jpg)
