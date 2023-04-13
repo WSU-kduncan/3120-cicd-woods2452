@@ -8,9 +8,12 @@ Halie Woods
 ## Part 1 - Semantic Versioning
 ### Documentation
 - How to generate a `tag` in `git` / GitHub
-
+    1. Identify the commit hash that you want to tag using the `git log` command.
+    2. Run the following command to create a new tag for the identified commit: `git tag -a tag-name commit-hash -m "tag message"`
+    3. Push the new tag to the remote repository on Github by running the following command: `git push origin tag-name`
 - Behavior of GitHub workflow
     - what does it do and when
+    
 - Link to Docker Hub repository (as additional proof)
 
 ### Resources
