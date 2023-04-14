@@ -36,12 +36,16 @@ Halie Woods
     - How to install adnanh's webhook to the instance
         - `sudo apt-get install webhook`
     - How to start the webhook
-        - 
+        - Create `webhook.conf` under `/etc` directory
+        - Set up the file so it executes the `update-and-restart.sh` script when the configuration file is triggered
+        - Run the following command to start the webhook: `sudo systemctl start webhook`
 - webhook task definition file
-    - Description of what it does
-    - Where it should be on the instance (if someone were to use your setup)
-- How to configure GitHub OR DockerHub to message the listener
-- RECORD your whole workflow process - from commit and push to your instance getting a fresh image
+    - Description and location: When the `webhook.conf` is loaded into the webhook program and a request is made to the configured endpoint, the program will execute the `update-and-restart.sh` script with the `/home/ubuntu/` directory. 
+- How to configure GitHub to message the listener
+    1. Go to `Webhooks` under `Settings`
+    2. Press `Add webhook`
+    3. Under `Payload URL` enter this URL: http://<EC2 elastic IP>:9000/hooks/redeploy-webhook
+    4. Press `Add webhook` at the bottom to save the webhook
 
 ### Resources 
 - [Using GitHub actions and webhooks](https://levelup.gitconnected.com/automated-deployment-using-docker-github-actions-and-webhooks-54018fc12e32)
